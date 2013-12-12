@@ -9,8 +9,11 @@ Simply add git-scripts/bin to your PATH.
 
 ## git-prune-branches
 
-Removes fully-merged branches and branches that have been deleted from
-upstream remotes. Interactively prompts for confirmation.
+Interactively prompts to removes local branches that are fully-merged
+into master (i.e. the result of `git branch --merged master`).
+
+Also removes any remote branches that have been deleted from the
+corresponding upstream remote (i.e. `git remote prune $remote`).
 
     git-prune-branches
 
