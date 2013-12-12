@@ -50,4 +50,7 @@ selected commits:
 
     git-change-author bozo@clownsforhire.com "Bozo Clown" bozo@clown.io HEAD^4..HEAD
 
+To force `git filter-branch` to rewrite again even if a backup exists
+in refs/original, pass the `-f` option:
 
+    git-change-author -f bozo@clownsforhire.com "Bozo Clown" bozo@clown.io
