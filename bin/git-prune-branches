@@ -40,7 +40,6 @@ if [ ! -z "$merged" ] ; then
 fi
 	    
 remotes=`git remote`
-echo $remotes
 for remote in $remotes ; do
     prompt=n
     read -p "Prune deleted branches from remote '$remote' (y=yes n=no)? " prompt
