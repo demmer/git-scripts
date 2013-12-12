@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -z $MASTER ] ; then
+    MASTER=master
+fi
+
+git diff $* `git merge-base HEAD $MASTER` HEAD
