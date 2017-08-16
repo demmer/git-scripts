@@ -1,0 +1,8 @@
+#!/bin/sh
+
+AUTHOR="--author `git config user.email`"
+if [ "$1" == "--all" ] ; then
+    AUTHOR=""
+fi
+
+exec git log master..$(git branch-name) $AUTHOR  --oneline --graph --pretty=format:'%C(yellow)%h%Creset - %Cblue[%an]%Creset: %s %Cgreen(%ar)%Creset'
